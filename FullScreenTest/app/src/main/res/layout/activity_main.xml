@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guru.ioio.fullscreentest.MyRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_full_screen"
+    android:fitsSystemWindows="true"
+
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#ffaa11"
+        android:onClick="onClick"
+        android:padding="1dp"
+        android:scaleType="centerCrop" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp" />
+</guru.ioio.fullscreentest.MyRelativeLayout>

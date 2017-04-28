@@ -71,6 +71,19 @@ findViewById(R.id.root).setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCR
         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
 ```
 
+当然拉，到这里还没完。这时候系统会自动给内部view添加一个paddingTop和paddingBottom。如果想让内容向上放到状态栏后面，就得做点什么。我的做法是在系统设置padding之后再设置一遍。自定义RelativeLayout如下：
+
+```java
+@Override
+public WindowInsets onApplyWindowInsets(WindowInsets insets) {
+    WindowInsets i = super.onApplyWindowInsets(insets);
+    setPadding(getPaddingLeft(), 0, getPaddingRight(), getPaddingBottom());
+    return i;
+}
+```
+即可。
+
+
 效果如下：
 - 无键盘
 ![preview1](https://github.com/jiaoyang623/translucent_status/blob/master/doc/preview1.png)

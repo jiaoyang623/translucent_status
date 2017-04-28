@@ -1,10 +1,6 @@
 # translucent_status
 
-这个项目用于记录如何让activity全屏，隐藏ActionBar，显示statusbar，并背景透明。效果如下：
-- 无键盘
-![preview1](https://github.com/jiaoyang623/translucent_status/blob/master/doc/preview1.png)
-- 有键盘
-![preview2](https://github.com/jiaoyang623/translucent_status/blob/master/doc/preview2.png)
+这个项目用于记录如何让activity全屏，隐藏ActionBar，显示statusbar，并背景透明。效果见末尾。
 这个项目参考了Android源代码中[Launcher3](https://android.googlesource.com/platform/packages/apps/Launcher3)的代码编写而成，主要包括以下几部分：
 
 1. 设置values/styles.xml，按照不同版本分成不同文件：
@@ -75,3 +71,8 @@ findViewById(R.id.root).setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCR
         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
 ```
 
+效果如下：
+- 无键盘
+![preview1](https://github.com/jiaoyang623/translucent_status/blob/master/doc/preview1.png)
+- 有键盘
+![preview2](https://github.com/jiaoyang623/translucent_status/blob/master/doc/preview2.png)
